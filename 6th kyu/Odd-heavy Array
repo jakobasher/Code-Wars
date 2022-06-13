@@ -1,0 +1,25 @@
+function isOddHeavy(n){
+  
+  let oddArr = n.filter(n => n%2 !== 0)
+  oddArr.sort((a,b)=> a-b)
+
+  let evenArr = n.filter(n => n%2 == 0)
+  evenArr.sort ((a,b)=> b-a)
+    
+  if (oddArr[0] > evenArr[0])
+    return true
+  else if (oddArr.length == 0)
+    return false 
+  else if (evenArr.length == 0)
+    return true
+  else 
+    return false
+}
+
+// Filter odd numbers, sort from lowest to highest
+// Filter even numbers, sort highest to lowest
+// Compare [0] index for odd > even
+// Scenario 1; Lowest odd > highest even, true
+// Scenario 2; There is no odd numbers, false
+// Scenario 3; There is no even numbers, true
+// Scenario 4; [0]? []? else, false
