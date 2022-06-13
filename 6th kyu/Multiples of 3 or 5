@@ -1,0 +1,14 @@
+function solution(number){
+
+  let arr = []
+  
+  for (let i = 0; i < number; i++) {
+    if (i%3 == 0 || i%5 == 0)
+      arr.push(i)
+  }
+  return arr.reduce((a,c) => a+c, 0)
+}
+// .push(), add element to end of array
+// .reduce((previousValue, currentValue) => accumlative, initialValue
+
+// sum+=i could of done it
