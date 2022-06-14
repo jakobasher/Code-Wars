@@ -1,0 +1,24 @@
+function stringSuffix(s) {
+  let arr =[]
+  let test = s
+
+  for (let i = 0; i<s.length-1; i++) {
+    let count = 0
+    test = test.slice(1)
+    
+    if (s[0] == test[0]) {
+      for (let j = 0; j< test.length; j++){
+        if (s[j] == test[j]) {
+          count++
+        } else
+        break
+      } 
+    }
+    arr.push(count)
+  }
+return arr.reduce((a,c) => a+c,0)+s.length
+}
+
+// .slice(1)? removes first letter of string
+// .reduce()
+// .push() adds element to end of array
