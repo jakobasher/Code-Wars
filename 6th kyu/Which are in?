@@ -1,0 +1,17 @@
+function inArray(array1,array2){
+  let arr =[]
+
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array2[j].includes(array1[i])) {
+        arr.push(array1[i])
+        break
+      }
+    }
+  }
+return arr.sort()
+
+}
+// .includes() returns true if value is included
+// .push() adds element to end of array
+// .sort() array sorts alphabetically
