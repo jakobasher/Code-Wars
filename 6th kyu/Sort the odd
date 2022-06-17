@@ -1,0 +1,23 @@
+function sortArray(array) {
+  
+  let odd = array.filter(e=>e%2).sort((a,b)=>a-b)
+  let arr = []
+ 
+  let i = 0
+  array.forEach(e=>{
+    if (e%2 == 0) {
+      arr.push(e)
+    } else {
+      arr.push(odd[i])
+      i++
+    }
+  })
+  return arr
+}
+
+// .sort() sorts by ascending order based on element index?
+// .sort((a,b)=>a-b) sorts by ascending based on element value?
+// .filter() create a new array with just odd values from array
+// .forEach() loop through whole array elements
+// if even push to new array same index
+// if odd push sorted array replacing index
