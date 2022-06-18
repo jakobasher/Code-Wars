@@ -1,0 +1,12 @@
+function solve(arr){
+  let count = {}
+  let i = 0
+  
+  arr.forEach(e => {
+    count[e] = count[e] + 1 || 1
+  })
+  return arr.sort((a,b) => count[b]-count[a] || a-b )
+}
+// {} 
+// .forEach() adds 1 to property if exist, otherwise property becomes 1
+// .sort()
