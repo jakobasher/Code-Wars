@@ -1,0 +1,9 @@
+function findNextSquare(sq) {
+  let test = Math.pow( Math.sqrt(sq)+1 , 2)
+
+  return Number.isInteger(test) ? test : -1
+  
+}
+
+// Number constructor
+// .isInteger() returns true if integer
