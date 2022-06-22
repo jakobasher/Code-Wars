@@ -1,0 +1,13 @@
+function howManyPizzas(n) {
+  let pizzas = (Math.PI*Math.pow(n/2,2)) / (Math.PI*Math.pow(4,2))
+  let slices = pizzas % 1 * 8
+  
+  return `pizzas: ${Math.floor(pizzas)}, slices: ${Math.round(slices)}` 
+}
+
+// Math.PI is pi
+// Math.round() rounds to the nearest integer
+// Math.floor() rounds down
+// Math.ceil() rounds up
+// %1 to return decimals
+// `` Template literals
