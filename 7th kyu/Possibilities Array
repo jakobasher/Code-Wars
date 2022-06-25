@@ -1,0 +1,8 @@
+function isAllPossibilities(x){
+  return x.length > 0 ? x.every((e,i) => x.includes(i)) : false
+  
+}
+
+// ternary
+// .every() 
+// .includes() returns true if included 
