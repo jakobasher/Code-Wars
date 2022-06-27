@@ -1,0 +1,27 @@
+function getLengthOfMissingArray(arrayOfArrays) {
+    if (arrayOfArrays.length == 0)
+      console.log(0)
+    
+    arrayOfArrays.sort((a,b)=>a.length-b.length)
+    let arr = []
+
+    for (let i = 0; i<arrayOfArrays.length; i++) {
+      arr.push(arrayOfArrays[i].length)
+    }
+
+    for (let i = 0; i<arr.length-1; i++) {
+      if(arr[i]+1 !== arr[i+1]) {
+        console.log(arr[i]+1)
+      }
+    }
+
+}
+
+getLengthOfMissingArray([ [ 1, 2 ], [ 4, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]] )//, 3);
+getLengthOfMissingArray([ [ 5, 2, 9 ], [ 4, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]] )//, 2);
+getLengthOfMissingArray([ [ null ], [ null, null, null ] ] )//, 2);
+getLengthOfMissingArray([ [ 'a', 'a', 'a' ], [ 'a', 'a' ], [ 'a', 'a', 'a', 'a' ], [ 'a' ], [ 'a', 'a', 'a', 'a', 'a', 'a' ]] )//, 5);
+getLengthOfMissingArray([ ])//, 0);
+
+
+//
