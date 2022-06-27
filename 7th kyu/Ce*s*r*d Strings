@@ -1,0 +1,19 @@
+function uncensor(infected, discovered) {
+  
+let j = 0
+let ans = ""
+  
+for (let i = 0; i<infected.length; i++) {
+  if (infected[i] == "*") {
+    ans += discovered[j]
+    j++
+  } else {
+    ans += infected[i]
+  } 
+}
+
+return ans
+  
+}
+
+// .replace() try next time
