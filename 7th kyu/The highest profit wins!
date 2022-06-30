@@ -1,0 +1,8 @@
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+  
+}
+
+
+// Math.min or Math.max does not work for arrays ?
+// ... spread syntax adds elements from
