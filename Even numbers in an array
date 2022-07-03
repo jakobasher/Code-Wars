@@ -1,0 +1,7 @@
+function evenNumbers(array, number) {
+  return array.filter(e => e%2==0).splice(-number)
+  
+}
+
+// .splice(-number) defines end of array
+// .filter() returns filtered array for each element if true
