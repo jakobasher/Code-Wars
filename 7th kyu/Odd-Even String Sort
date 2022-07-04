@@ -1,0 +1,11 @@
+function sortMyString(S) {
+   let evens = S.split('').filter((e,i) => i%2 == 0).join('')
+   let odds = S.split('').filter((e,i) => i%2 !==0).join('')
+    
+   return evens+" "+odds
+
+}
+
+// .split() splits string and puts into array elements
+// .filter() returns filtered conditions of array
+// .join() makes string from joining array elements
