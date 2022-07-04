@@ -1,0 +1,11 @@
+function removeSmallest(numbers) {
+  let min = Math.min(...numbers)
+  let index = numbers.indexOf(min)
+  return numbers.filter((e, i) => i !== index)
+  
+}
+
+// Math.min() returns lowest values 
+// ... Spread syntax 
+// .indexOf() returns index when search element is found
+// .filter() e or _ is okay
