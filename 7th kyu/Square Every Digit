@@ -1,0 +1,16 @@
+function squareDigits(num){
+  let arr = Array.from(num.toString()).map(Number);
+  let arr2 = []
+  
+  for (let i = 0; i<arr.length;i++) {
+    arr2.push(arr[i]*arr[i])
+  }
+  
+  return parseInt(arr2.join(""))
+}
+
+// Array.from() creates new array
+// .toString()
+// Number
+// parseInt()
+// .join()
